@@ -1,0 +1,163 @@
+<div class="header">
+    <table>
+        <tr>
+            <td>
+                <h1><b>Boutique de sport</b></h1>
+            </td>
+           
+                <div class="search-container">
+                    <td>
+                    <input type="text" class="search-input">
+                    </td>
+                    <td>
+                        <span class="pi pi-search"></span>
+                    </td>
+
+                </div>
+           
+            <td>
+                <p-dropdown [options]="langueOptions" [(ngModel)]="selectedLanguage" optionLabel="label"></p-dropdown>
+            </td>
+            <td class="panier">
+                <img src="assets/panier.png" class="small-image align-right" routerLink="/votre panier">
+                <p-badge [value]="cartItemCount.toString()" class="panier-badge"></p-badge>
+            </td>
+
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <button class="connexion-button" value="Connexion" name="connexion" id="id_connexion" routerLink="/connexion">
+                    Connexion
+                </button>
+            </td>
+            <td>
+                <img src="./assets/contact.jpg" class="small-image align-right">
+            </td>
+        </tr>
+       
+            <div class="menu-center">
+              
+                <p-tabMenu [model]="items" [(activeItem)]="activeItem" (activeItemChange)="onActiveItemChange($event)"></p-tabMenu>
+
+        
+            </div>
+        <br>
+
+     
+        </table>
+</div>
+        <div class="main-container">
+            <img class="images-produits" src="./assets/productsimages/{{ selectedProduct?.image }}" [alt]="selectedProduct?.name">
+
+        <br><br>
+           
+            <div class="data-container">
+                <table border="2"  width="30" higth="10">
+                    <legend class="titre-legend">Informations</legend>
+                    <br><br><br>
+                    <h6 class="titre-produit">{{ selectedProduct?.name }}</h6>
+                    <h6 class="titre-produit"> Réference : {{ selectedProduct?.reference }}</h6>
+                    <div class="titre-produit">
+                        <h6 *ngIf="selectedProduct?.status === 'Nouveautés' ||selectedProduct?.status === 'Tendances'">{{ selectedProduct?.price + 'TND' }}</h6>
+                        <h6 *ngIf="selectedProduct?.status === 'Articles soldés'"
+                            class="texte-barre-black">{{ selectedProduct?.oldprice + 'TND' }}</h6>
+                        <h6 *ngIf="selectedProduct?.status === 'Articles soldés'"
+                            class="texte-red">{{ selectedProduct?.newprice + 'TND' }}</h6>
+                    </div>
+                    <br>
+                    <div class="rate">
+                        <form [formGroup]="formGroup">
+                            <p-rating formControlName="value"></p-rating>
+                        </form>
+                    </div>
+                    <br>
+                    <h6 class="categorie-produit"><b>Catégorie :</b> <span class="blue-text">{{ selectedProduct?.status }}</span></h6>
+                    <br>
+                    <h5 class="categorie-produit"><b>Taille</b></h5>
+                    <br>
+                    <div class="card">
+                        <p-multiSelect [options]="sizes" [(ngModel)]="selectedSizes" optionLabel="size"></p-multiSelect>
+                    </div>
+                    <br>
+                    <h5 class="categorie-produit"><b>Couleur</b></h5>
+                    <br>
+                    <div class="card ">
+                        <p-multiSelect [options]="colors" [(ngModel)]="selectedColors" optionLabel="color"></p-multiSelect>
+                    </div>
+                    <br>
+                    <div>
+                        <h5 class="categorie-produit"><b>Quantité</b></h5>
+                        <form [formGroup]="formGroup" class="card">
+                            <p-inputNumber inputId="integeronly" formControlName="value" ></p-inputNumber>
+                        </form>
+                    </div>
+                    <br>
+                    <input class="button-panier" type="submit" value="Ajouter au panier" (click)="addToCart()">
+
+                    <br><br>
+                </table>    
+        </div>
+        </div>
+        <br>
+        <div class="detail-container">
+            <table border="2">
+                
+                <h6 class="titre-produit">A propos du produit</h6>
+                
+            </table>    
+         </div>
+            <br><br>
+            <div>
+                <table border="2" width="2500">
+        
+                    <tr class="footer-container">
+        
+                        <td valign="top">
+        
+                            <h5 class="titre-footer">Nos services</h5>
+                            <table border="2" cellpadding="15">
+                                <tr>
+                                    <td>Nos magasins</td>
+                                </tr>
+                                <tr>
+                                    <td>FAQ</td>
+                                </tr>
+                                <tr>
+                                    <td>Echanges</td>
+                                </tr>
+                                <tr>
+                                    <td>Contactez-nous</td>
+                                </tr>
+                            </table>
+                            <br>
+                            <h5 class="titre-footer">Moyens de paiement</h5>    
+                            
+                        </td>
+        
+                        <td valign="bottom">
+                            
+                            <img src="./assets/marques.png" >
+                            <img src="./assets/paiement.jpg" >
+                           </td> 
+                           <td valign="top">
+                            <h5 class="titre-footer"> Nos contacts </h5>
+                            <br>
+                            <div class="contact-container">
+                                <img src="./assets/logos/fb_icon.png" class="contact-logo">
+                                <img src="./assets/logos/logo_Instagram.png" class="contact-logo">
+                                <br><br>
+                                <img src="./assets/logos/Skype_logo.png" class="contact-logo">
+                                <img src="./assets/logos/Gmail_icon.png" class="contact-logo">
+                                <br><br>
+                            </div>
+                            </td> 
+        
+                    </tr>
+        
+                </table>
+        </div>
+        

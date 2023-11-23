@@ -1,0 +1,228 @@
+<table border="1">
+  <thead>
+    <tr>
+      <th colspan="5">Produit</th>
+      <th colspan="4">Détails</th>
+      <td>
+        <p-button (click)="showPlusDialog()" icon="pi pi-plus" ></p-button>
+        <p-dialog [(visible)]="visiblePlus" [style]="{width: '80vw'}">
+<div class ="main-container">
+  <div class="info-container">
+            <form>
+              <fieldset>
+                <table border="2"  width="30" higth="10">
+                <legend><b>Informations du produit</b></legend>
+                <label for="reference" class="titre-label">Référence</label>
+                <br>
+                <input type="reference">
+                <br><br>
+                <label for="nom" class="titre-label">Nom</label>
+                <br>
+                <input type="nom">
+                <br><br>
+                <label for="catégorie" class="titre-label">Catégorie</label>
+                <br>
+                <select id="category">
+                  <option>Choisir une catégorie</option>
+                  <option value="1">Homme</option>
+                  <option value="2">Femme</option>
+                  <option value="3">Enfant</option>
+                  <option value="4">Accessoire</option>
+              </select>
+              <br><br>
+              <label for="type" class="titre-label">Type</label>
+              <br>
+              <select id="type">
+                <option>Choisir un type </option>
+                <option value="1">Hauts</option>
+                <option value="2">PantalonsLeggings</option>
+                <option value="3">ChaussuresBottes</option>
+            </select>
+            <br><br>
+            <label for="type" class="titre-label">Status</label>
+            <br>
+              <select id="status">
+                <option>Choisir un status </option>
+                <option value="1">Tendance</option>
+                <option value="2"> Nouveauté</option>
+                <option value="3"> Article_soldé</option>
+            </select>
+            <br><br>
+            <label for="prix" class="titre-label">Prix</label>
+            <br>
+            <input type="prix">
+            <br><br> 
+            <label for="image" class="titre-label">Images</label>
+            <br>
+            <div>
+              <p-button label="Importer" icon="pi pi-plus" (click)="importImages()" name="photo"></p-button>
+              <p-button label="Télécharger" (click)="downloadProduct()" icon="pi pi-download"></p-button>
+              <p-button label="Annuler" (click)="resetForm()" icon="pi pi-times"></p-button>
+
+            </div>
+            <br>
+                </table>
+           </fieldset>
+            </form>
+          </div>
+       
+          <div class="ajout-container">
+                <table border="2"  width="300" higth="200">
+                <legend><b>Détails du produit</b></legend>
+                <br>
+                
+                <tr class="table-detail">
+                 
+                  <th>Référence</th>
+                  <th>Taille</th>
+                  <th>Couleur</th>
+                  <th>Quantité</th>
+                  <th>Prix d'achat</th>
+                  <th>Seuil</th>
+                  <td><i class="pi pi-plus" style="font-size: 1.5rem"></i></td>
+                 
+                </tr>
+                <br>
+                </table>         
+          </div>
+        </div>
+        <div  class="buttons-container">
+          <p-button label="Enregistrer le produit" (click)="saveProduct()" icon="pi pi-check"></p-button>
+
+          <p-button label="Annuler" icon="pi pi-times"></p-button>
+        </div>
+          </p-dialog>
+          
+      </td>
+    </tr>
+    <tr>
+      <th>Article</th>
+      <th>Prix</th>
+      <th>Catégorie</th>
+      <th>Type</th>
+      <th>Status</th>
+      <th>Référence</th>
+      <th>Taille</th>
+      <th>Couleur</th>
+      <th>Quantité</th>
+    </tr>
+  </thead>
+  <tbody id="productTable">
+    <ng-container *ngFor="let product of products">
+      <tr>
+        <td>
+          <img src="./assets/productsimages/{{ product.image }}" [alt]="product.name">
+          {{ product.name }}
+        </td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.type }}</td>
+        <td>{{ product.status }}</td>
+        <td>{{ product.reference }}</td>
+        <td>{{ product.sizes }}</td>
+        <td>{{ product.colors }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>
+          <p-button (click)="showEyeDialog()" icon="pi pi-eye" ></p-button>
+          <p-dialog [(visible)]="visibleEye" [style]="{width: '80vw'}">
+            <div class ="main-container">
+              <div class="info-container">
+                        <form>
+                          <fieldset>
+                            <table border="2"  width="30" higth="10">
+                            <legend><b>Informations du produit</b></legend>
+                            <div class="input-block">
+                              <label for="reference" class="titre-label">Référence</label>
+                              <input type="text" id="reference" value="{{ product.reference }}">
+                          </div>
+                            <br>
+                            <div class="input-block">
+                              <label for="nom" class="titre-label">Nom</label>
+                              <input type="text" id="name" value="{{ product.name }}">
+                          </div>
+                            <br>
+                            <div class="input-block">
+                              <label for="catégorie" class="titre-label">Catégorie</label>
+                              <div class="pi-input-container">
+                                  <input type="text" id="category" value="{{ product.category }}" class="pi-input">
+                                  <i class="pi pi-times inside-icon-times"></i>
+                                  <i class="pi pi-angle-down inside-icon-angle-down"></i>
+                              </div>
+                            </div>
+                            <br>
+                            <div class="input-block">
+                              <label for="type" class="titre-label">Type</label>
+                              <div class="pi-input-container">
+                                  <input type="text" id="type" value="{{ product.type }}" class="pi-input">
+                                  <i class="pi pi-times inside-icon-times"></i>
+                                  <i class="pi pi-angle-down inside-icon-angle-down"></i>
+                              </div>
+                            </div>
+                        <br>
+                        <div class="input-block">
+                          <label for="status" class="titre-label">Status</label>
+                          <div class="pi-input-container">
+                              <input type="text" id="status" value="{{ product.status}}" class="pi-input">
+                              <i class="pi pi-times inside-icon-times"></i>
+                              <i class="pi pi-angle-down inside-icon-angle-down"></i>
+                          </div>
+                        </div>
+                        <br>
+                        <div class="input-block">
+                          <label for="prix" class="titre-label">Prix</label>
+                          <input type="text" id="prix" value="{{ product.price }}">
+                      </div>
+                        <br> 
+                        <label for="image" class="titre-label">Images</label>
+                        <br>
+                        <img src="./assets/productsimages/{{ product.image }}" [alt]="product.name">
+                        <br>
+                        {{ product.name }}
+                        <br>
+                        <div>
+                          <p-button label="Importer" icon="pi pi-plus" (click)="importImages()" name="photo"></p-button>
+                          <p-button label="Télécharger" (click)="downloadProduct()" icon="pi pi-download"></p-button>
+                          <p-button label="Annuler" (click)="resetForm()" icon="pi pi-times"></p-button>
+            
+                        </div>
+                        <br>
+                            </table>
+                       </fieldset>
+                        </form>
+                      </div>
+                   
+                      <div class="ajout-container">
+                            <table border="2"  width="300" higth="200">
+                            <legend><b>Détails du produit</b></legend>
+                            <br>
+                            
+                            <tr class="table-detail">
+                              <th>Référence</th>
+                              <th>Taille</th>
+                              <th>Color</th>
+                              <th>Quantité</th>
+                              <th>Prix d'achat</th>
+                              <th>Seuil</th>
+                            </tr>
+                            <tr>
+                              <td>{{ product.reference }}</td>
+                              <td>{{ product.sizes }}</td>
+                              <td>{{ product.colors }}</td>
+                              <td></td>
+                              <td>{{ product.price }}</td>
+                              <td></td>
+                            </tr>
+                            <br>
+                            </table>         
+                      </div>
+                    </div>
+                    <div  class="buttons-container">
+                      <p-button label="Enregistrer le produit" (click)="saveProduct()" icon="pi pi-check"></p-button>
+            
+                      <p-button label="Annuler" icon="pi pi-times"></p-button>
+                    </div>
+          </p-dialog>   
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

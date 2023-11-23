@@ -1,0 +1,88 @@
+<fieldset>
+    <div class="text-center">
+        <h1><b>Créer un compte et connectez-vous à tous nos services </b></h1>
+    </div>
+
+    <form class="user" [formGroup]=" registerform" (ngSubmit)="register()">
+
+        <div class="float-left">
+            <div class="form-group">
+                <label for="exampleFirstName">Prénom </label>
+
+            <br><br>
+            <label for="exampleLastName">Nom </label>
+            <br><br>
+            <label for="exampleInputEmail">Adresse Mail </label>
+            <br><br>
+            <label for="exampleInputPassword">Mot de passe </label>
+            <br><br>
+            <label for="exampleRepeatPassword"> Confirmer Mot de passe </label>
+            <br><br><br>
+            <label for="id_sexe">Sexe</label>
+            <br><br>
+            <label for="id_date_naissance">Date de naissance</label>
+            <br><br>
+            <label for="id_adresse">Adresse </label>
+        </div>
+        </div>
+
+        <div class="float-left">
+            <div class="form-group">
+            <input type="text" formControlName="firstname" class="form-control form-control-user" id="exampleFirstName"
+            placeholder="Entrer votre Prénom">
+        <div *ngIf="firstname?.touched && firstname?.invalid">
+            <small class="text-danger" *ngIf="firstname?.errors?.['required']">firstname is required</small>
+            <small class="text-danger" *ngIf="firstname?.errors?.['pattern']">firstname is invalid</small>
+        </div>
+        <br>
+        <input type="text" formControlName="lastname" class="form-control form-control-user" id="exampleLastName"
+        placeholder="Entrer votre Nom ">
+    <div *ngIf="lastname?.touched && lastname?.invalid">
+        <small class="text-danger" *ngIf="lastname?.errors?.['required']">lastname is required</small>
+        <small class="text-danger" *ngIf="lastname?.errors?.['pattern']">lastname is invalid</small>
+    </div>
+    <br>
+    <input type="email" formControlName="email" class="form-control form-control-user" id="exampleInputEmail"
+    placeholder=" Entrer votre Adresse Mail ">
+<div * ngIf="email?.touched && email?.invalid">
+    <small class="text-danger" * ngIf="email?.errors?.['required']">emailadress is required</small>
+    <small class="text-danger" * ngIf="email?.errors?.['email']">emailadress is invalid</small>
+</div>
+<br>
+
+<input type="password" formControlName="password" class="form-control form-control-user"
+            id="exampleInputPassword" placeholder=" Entrer votre mot de passe">
+        <div * ngIf="password?.touched && password?.invalid">
+            <small class="text-danger" * ngIf="password?.errors?.['required']">password is required</small>
+            <small class="text-danger" * ngIf="password?.errors?.['minlength']">password is invalid</small>
+        </div>
+        <br>
+        <input type="password" formControlName="passwordrep" class="form-control form-control-user"
+        id="exampleRepeatPassword" placeholder="Retapper votre mot de passe">
+    <div * ngIf="passwordrep?.touched && passwordrep?.invalid">
+        <small class="text-danger" * ngIf="passwordrep?.errors?.['required']">passwordrep is required</small>
+        <small class="text-danger" * ngIf="passwordrep?.errors?.['minlength']">passwordrep is invalid</small>
+    </div>
+<br>
+<div class="choix-mult">
+    <input type="radio" id="Btn1"  value="Femme" formControlName="gender" />
+    <label for="Btn1">Femme</label>
+    <input type="radio" id="Btn2"  value="Homme" formControlName="gender"  />
+    <label for="Btn2">Homme</label>
+    <br><br>
+       </div>
+    <input type="date" formControlName="birthdate" id="id_date_naissance" class="form-control form-control-user">
+    <br><br>
+    <input type="text" formControlName="address" placeholder="Entrez votre Adresse" class="form-control form-control-user">
+    <br><br>
+         
+        </div>
+</div>
+<button type="submit" class="btn-register">
+    Sauvegarder
+</button>
+<p-messages *ngIf="showToaster" [(value)]="messages1" [enableService]="false" [closable]="false"></p-messages>
+    </form>
+   
+
+</fieldset>

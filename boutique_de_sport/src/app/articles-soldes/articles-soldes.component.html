@@ -1,0 +1,146 @@
+<div class="header">
+    <table>
+        <tr>
+            <td>
+                <h1><b>Boutique de sport</b></h1>
+            </td>
+           
+                <div class="search-container">
+                    <td>
+                    <input type="text" class="search-input">
+                    </td>
+                    <td>
+                        <span class="pi pi-search"></span>
+                    </td>
+
+                </div>
+           
+            <td>
+                <p-dropdown [options]="langueOptions" [(ngModel)]="selectedLanguage" optionLabel="label"></p-dropdown>
+            </td>
+            <td>
+                <img src="assets/panier.png" class="small-image align-right">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <button class="connexion-button" value="Connexion" name="connexion" id="id_connexion" routerLink="/connexion">
+                    Connexion
+                </button>
+            </td>
+            <td>
+                <img src="./assets/contact.jpg" class="small-image align-right">
+            </td>
+        </tr>
+       
+            <div class="menu-center">
+              
+                    <p-tabMenu [model]="items"></p-tabMenu>
+        
+            </div>
+       
+        <tr>
+            <td colspan="5" class="carousel-center">
+                <div class="carousel-container">
+                    <carousel>
+                        <slide>
+                          <img src="./assets/background.png" alt="First slide">
+                        </slide>
+                        <slide>
+                          <img src="./assets/reduction.png" alt="Second slide">
+                        </slide>
+                    </carousel>
+                </div>
+            </td>
+        </tr>
+        <br><br>
+    <div class="text-center">
+            
+        <a class="small"><h1>Articles soldés</h1><br><br></a>
+    </div>
+    <p-dataView #dv [value]="saleProducts" [sortField]="sortField" [sortOrder]="sortOrder">
+        <ng-template pTemplate="header">
+            <div class="flex flex-column md:flex-row md:justify-content-between">
+                <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Trier par" (onChange)="onSortChange($event)" styleClass="mb-2 md:mb-0"></p-dropdown>
+            </div>
+        </ng-template>
+        <ng-template let-product pTemplate="listItem">
+            <div class="col-12">
+                <div class="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4" [routerLink]="'/details/' + product.name">
+                    <img class="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round"   src="./assets/productsimages/{{ product.image }}" [alt]="product.name" >
+                    <div class="text-2xl font-bold text-900">{{ product.name }}</div>
+                    <div class="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
+                        <div class="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
+                            <span class="texte-barre-black">{{ product.oldprice + 'TND' }}</span>
+                            <span  class="texte-red">{{ product.newprice + 'TND' }}</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-dataView>
+    
+
+
+
+
+
+
+
+
+    <br><br>
+
+    <div>
+        <table border="2" width="2000">
+
+            <tr class="footer-container">
+
+                <td valign="top">
+
+                    <h5 class="titre-footer">Nos services</h5>
+                    <table border="2" cellpadding="15">
+                        <tr>
+                            <td>Nos magasins</td>
+                        </tr>
+                        <tr>
+                            <td>FAQ</td>
+                        </tr>
+                        <tr>
+                            <td>Echanges</td>
+                        </tr>
+                        <tr>
+                            <td>Contactez-nous</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <h5 class="titre-footer">Moyens de paiement</h5>    
+                    
+                </td>
+
+                <td valign="bottom">
+                    
+                    <img src="./assets/marques.png" >
+                    <img src="./assets/paiement.jpg" >
+                   </td> 
+                   <td valign="top">
+                    <h5 class="titre-footer"> Nos contacts </h5>
+                    <br>
+                    <div class="contact-container">
+                        <img src="./assets/logos/fb_icon.png" class="contact-logo">
+                        <img src="./assets/logos/logo_Instagram.png" class="contact-logo">
+                        <br><br>
+                        <img src="./assets/logos/Skype_logo.png" class="contact-logo">
+                        <img src="./assets/logos/Gmail_icon.png" class="contact-logo">
+                        <br><br>
+                    </div>
+                    </td> 
+
+            </tr>
+
+        </table>
+        <br><br>
+</div>

@@ -1,0 +1,191 @@
+<div class="header">
+    <table>
+        <tr>
+            <td>
+                <h1><b>Boutique de sport</b></h1>
+            </td>
+           
+                <div class="search-container">
+                    <td>
+                    <input type="text" class="search-input">
+                    </td>
+                    <td>
+                        <span class="pi pi-search"></span>
+                    </td>
+
+                </div>
+           
+            <td>
+                <p-dropdown [options]="langueOptions" [(ngModel)]="selectedLanguage" optionLabel="label"></p-dropdown>
+            </td>
+            <td>
+                <img src="assets/panier.png" class="small-image align-right">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+           
+            <td>
+                <ng-container *ngIf="currentUser; else showLoginButton">
+                    <p>{{ currentUser.firstname }} {{ currentUser.lastname }}</p>
+                </ng-container>
+                <ng-template #showLoginButton>
+                    <button class="connexion-button" value="Connexion" name="connexion" id="id_connexion" routerLink="/connexion">
+                        Connexion
+                    </button>
+                </ng-template>
+            </td>
+            
+            <td>
+                <img src="./assets/contact.jpg" class="small-image align-right">
+            </td>
+        </tr>
+       
+            <div class="menu-center">
+              
+                <p-tabMenu [model]="items" [(activeItem)]="activeItem" (activeItemChange)="onActiveItemChange($event)"></p-tabMenu>
+
+        
+            </div>
+       
+        <tr>
+            <td colspan="5" class="carousel-center">
+                <div class="carousel-container">
+                    <carousel>
+                        <slide>
+                          <img src="./assets/background.png" alt="First slide">
+                        </slide>
+                        <slide>
+                          <img src="./assets/reduction.png" alt="Second slide">
+                        </slide>
+                    </carousel>
+                </div>
+            </td>
+        </tr>
+        <br><br>
+    <hr width=90%>
+        <tr>
+            <td>
+                <div class="text-center">
+            
+                    <a class="small" routerLink="/tendances"><h1>Tendances</h1><br><br></a>
+
+                </div>
+                <div class="card">
+                    <p-carousel [value]="productsTendances" [numVisible]="5" [numScroll]="2" [circular]="false" [responsiveOptions]="responsiveOptions">
+                        <ng-template let-product pTemplate="item">
+                            <div class="border-1 surface-border border-round m-2 text-center py-5 px-3" [routerLink]="'/details/' + product.name">
+                                <div class="mb-3 ">
+                                    <img src="./assets/productsimages/{{ product.image }}" [alt]="product.name" class="w-6 shadow-2" />
+
+                                </div>
+                                <div>
+                                    <h4 class="mb-1">{{ product.name }}</h4>
+                                    <h6 class="mt-0 mb-3">{{ product.price  + 'TND' }}</h6>
+                                    <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </p-carousel>
+                </div>
+                <div class="text-center">
+            
+                    <a class="small" routerLink="/nouveautes" ><h1>Nouveautés</h1><br><br></a>
+                </div>
+                <div class="card">
+                    <p-carousel [value]="productsNouveautes" [numVisible]="5" [numScroll]="2" [circular]="false" [responsiveOptions]="responsiveOptions">
+                        <ng-template let-product pTemplate="item">
+                            <div class="border-1 surface-border border-round m-2 text-center py-5 px-3 " [routerLink]="'/details/' + product.name">
+                                <div class="mb-3 ">
+                                    <img src="./assets/productsimages/{{ product.image }}" [alt]="product.name"  class="w-6 shadow-2" />
+
+                                </div>
+                                <div >
+                                    <h4 class="mb-1">{{ product.name }}</h4>
+                                    <h6 class="mt-0 mb-3">{{ product.price  + 'TND' }}</h6>
+                                    <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </p-carousel>
+                </div>
+                <div class="text-center">
+            
+                    <a class="small" routerLink="/articles-soldes" ><h1>Articles soldés</h1><br><br></a>
+                </div>
+                <div class="card">
+                    <p-carousel [value]="productsArticlessoldes" [numVisible]="5" [numScroll]="2" [circular]="false" [responsiveOptions]="responsiveOptions">
+                        <ng-template let-product pTemplate="item">
+                            <div class="border-1 surface-border border-round m-2 text-center py-5 px-3 "  [routerLink]="'/details/' + product.name">
+                                <div class="mb-3 ">
+                                    <img src="./assets/productsimages/{{ product.image }}" [alt]="product.name"   class="w-6 shadow-2" />
+
+                                </div>
+                                <div>
+                                    <h4 class="mb-1">{{ product.name }}</h4>
+                                    <h6 class="texte-barre-black">{{ product.oldprice + 'TND' }}</h6>
+                                    <br>
+                                    <h6 class="texte-red">{{ product.newprice + 'TND' }}</h6>
+                                    <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
+                                </div>
+                                
+                            </div>
+                        </ng-template>
+                    </p-carousel>
+                </div>
+        
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <div>
+        <table border="2" width="2000">
+
+            <tr class="footer-container">
+
+                <td valign="top">
+
+                    <h5 class="titre-footer">Nos services</h5>
+                    <table border="2" cellpadding="15">
+                        <tr>
+                            <td>Nos magasins</td>
+                        </tr>
+                        <tr>
+                            <td>FAQ</td>
+                        </tr>
+                        <tr>
+                            <td>Echanges</td>
+                        </tr>
+                        <tr>
+                            <td>Contactez-nous</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <h5 class="titre-footer">Moyens de paiement</h5>    
+                    
+                </td>
+
+                <td valign="bottom">
+                    
+                    <img src="./assets/marques.png" >
+                    <img src="./assets/paiement.jpg" >
+                   </td> 
+                   <td valign="top">
+                    <h5 class="titre-footer"> Nos contacts </h5>
+                    <br>
+                    <div class="contact-container">
+                        <img src="./assets/logos/fb_icon.png" class="contact-logo">
+                        <img src="./assets/logos/logo_Instagram.png" class="contact-logo">
+                        <br><br>
+                        <img src="./assets/logos/Skype_logo.png" class="contact-logo">
+                        <img src="./assets/logos/Gmail_icon.png" class="contact-logo">
+                        <br><br>
+                    </div>
+                    </td> 
+
+            </tr>
+
+        </table>
+</div>

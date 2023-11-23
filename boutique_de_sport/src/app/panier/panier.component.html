@@ -1,0 +1,153 @@
+<div class="header">
+    <table>
+        <tr>
+            <td>
+                <h1><b>Boutique de sport</b></h1>
+            </td>
+           
+                <div class="search-container">
+                    <td>
+                    <input type="text" class="search-input">
+                    </td>
+                    <td>
+                        <span class="pi pi-search"></span>
+                    </td>
+
+                </div>
+           
+            <td>
+                <p-dropdown [options]="langueOptions" [(ngModel)]="selectedLanguage" optionLabel="label"></p-dropdown>
+            </td>
+            <td class="panier">
+                <img src="assets/panier.png" class="small-image align-right" routerLink="/votre panier">
+                <p-badge [value]="cartItemCount.toString()" class="panier-badge"></p-badge>
+            </td>
+
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <button class="connexion-button" value="Connexion" name="connexion" id="id_connexion" routerLink="/connexion">
+                    Connexion
+                </button>
+            </td>
+            <td>
+                <img src="./assets/contact.jpg" class="small-image align-right">
+            </td>
+        </tr>
+       
+            <div class="menu-center">
+              
+                <p-tabMenu [model]="items" [(activeItem)]="activeItem" (activeItemChange)="onActiveItemChange($event)"></p-tabMenu>
+
+        
+            </div>
+        <br>
+
+     
+        </table>
+</div>
+<div class="texte-center">
+    <h1>Votre Panier</h1>
+    <br><br>
+    <p-table [value]="cartItems" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th></th>
+                <th>Description</th>
+                <th>Taille</th>
+                <th>Couleur</th>
+                <th>Prix Unitaire</th>
+                <th>Quantité</th>
+                <th>Prix Total</th>
+                <th>Actions</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>
+                    <img *ngIf="product?.image" src="./assets/productsimages/{{ product.image }}" [alt]="product.name">
+                </td>
+                <td>{{ product?.name }}</td>
+                <td>
+                    <ul *ngIf="product?.sizes">
+                        <li *ngFor="let size of product.sizes">{{ size.size }}</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul *ngIf="product?.colors">
+                        <li *ngFor="let color of product.colors">{{ color.color }}</li>
+                    </ul>
+                </td>
+                
+                
+                  
+                <td>{{ product.price }}</td>
+                <td>{{ product.quantity }}</td>
+                <td>{{ product.price * product.quantity }}</td>
+                <td>
+                    <button (click)="removeFromCart(product)" pButton type="button" icon="pi pi-trash"
+                        class="p-button-raised p-button-danger"></button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<br><br>
+<button (click)="onCommanderClick()" pButton label="Commander" class="button-commander"></button>
+<div *ngIf="commandeReussie">
+    <p-messages [value]="msg" [enableService]="false"></p-messages>
+</div>
+<br><br>
+<div>
+    <table border="2" width="2500">
+
+        <tr class="footer-container">
+
+            <td valign="top">
+
+                <h5 class="titre-footer">Nos services</h5>
+                <table border="2" cellpadding="15">
+                    <tr>
+                        <td>Nos magasins</td>
+                    </tr>
+                    <tr>
+                        <td>FAQ</td>
+                    </tr>
+                    <tr>
+                        <td>Echanges</td>
+                    </tr>
+                    <tr>
+                        <td>Contactez-nous</td>
+                    </tr>
+                </table>
+                <br>
+                <h5 class="titre-footer">Moyens de paiement</h5>    
+                
+            </td>
+
+            <td valign="bottom">
+                
+                <img src="./assets/marques.png" >
+                <img src="./assets/paiement.jpg" >
+               </td> 
+               <td valign="top">
+                <h5 class="titre-footer"> Nos contacts </h5>
+                <br>
+                <div class="contact-container">
+                    <img src="./assets/logos/fb_icon.png" class="contact-logo">
+                    <img src="./assets/logos/logo_Instagram.png" class="contact-logo">
+                    <br><br>
+                    <img src="./assets/logos/Skype_logo.png" class="contact-logo">
+                    <img src="./assets/logos/Gmail_icon.png" class="contact-logo">
+                    <br><br>
+                </div>
+                </td> 
+
+        </tr>
+
+    </table>
+</div>

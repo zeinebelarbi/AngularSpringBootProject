@@ -1,0 +1,76 @@
+.connexion-button-container {
+    text-align: right;
+}
+
+.connexion-button {
+    display: inline-block;
+}
+
+.small-image {
+    width: 32px;
+    height: 32px;
+}
+
+.align-right {
+    float: right;
+}
+
+.header {
+    text-align: center;
+}
+
+.search-container {
+    display: inline-block;
+}
+
+.header td {
+    padding: 10px;
+}
+
+.menu-center {
+    text-align: center; 
+    margin: 10px 0;
+}
+.carousel-center {
+    text-align: center;
+}
+
+.carousel-container {
+    display: inline-block;
+    margin: 10px 0;
+}
+.texte-barre-black {
+    text-decoration: line-through;
+    color: black;
+}
+
+.texte-red {
+    color: rgb(231, 9, 46); 
+}
+
+
+ 
+.contact-logo {
+    width: 35px;
+    height: 35px; 
+    margin-right: 10px;
+}
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-right: 10px;
+}
+
+td {
+    border-top: 1px solid black;
+    padding: 15px;
+}
+.titre-footer{
+    color: rgb(231, 9, 46); 
+    margin-right: 10px;
+}
+.contact-container {
+    text-align: right;
+    float: right;
+}
+

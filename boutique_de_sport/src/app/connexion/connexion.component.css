@@ -1,0 +1,39 @@
+fieldset{
+    margin: auto;
+    width: 60%;
+    position: relative;
+}
+.btn-login{
+    width: 100%;
+    background-color: rgb(40, 172, 212);
+    color: white; 
+    padding: 7px 60px; 
+    border: none;
+}
+.form-group label {
+    font-weight: bold; 
+    margin-bottom: 5px; 
+}
+
+
+.form-group input {
+    border: 3px solid rgb(10, 1, 1); 
+
+}
+.text-supp{
+    margin-right: 10px;
+    color: black;
+}
+.icons{
+    display: flex; 
+    align-items: center;
+}
+.icons i {
+    font-size: 2.5rem; 
+    margin-left: 80px;
+}
+.icon-gmail{
+    width: 2.5rem; 
+    height: 2.5rem;
+    margin-left: 240px;
+}

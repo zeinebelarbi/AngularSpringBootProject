@@ -1,0 +1,44 @@
+fieldset{
+    margin: auto;
+    width: 80%;
+    position: relative;
+  
+}
+.float-left{
+    padding: 15px;
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+.display-block{
+    display: block;
+}
+label{
+    margin-top: 9px;
+}
+.btn-register{
+    background-color: rgb(40, 172, 212);
+    color: white; 
+    padding: 7px 60px; 
+    border: none;
+    border-radius: 10px;
+    margin-left:400px;
+}
+.form-group input {
+    border: 3px solid black; 
+    margin-bottom: 5px;
+    margin-left: -350px;
+}
+
+
+.form-group label {
+  
+    margin-bottom: 5px; 
+}
+.text-supp{
+    margin-right: 10px;
+    color: black;
+}
+.choix-mult{
+    margin-left: 300px; 
+}

@@ -1,0 +1,120 @@
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  thead {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  th {
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  
+  td i.pi.pi-plus {
+    cursor: pointer;
+    color: green;
+  }
+  
+  
+  td:last-child {
+    text-align: center;
+  }
+  
+
+  .filter, .search {
+    margin-bottom: 20px;
+  }
+  
+  .filter select, .search input[type="text"], .search button {
+    margin-right: 10px;
+  }
+  
+
+  td img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .info-container{
+    flex: 1;
+    margin-right: 3px;
+    margin-left:5px;
+
+  } 
+  
+
+  .main-container {
+    display: flex;
+    margin-top: 20px;
+  }
+  .ajout-container{
+    flex: 2; 
+    margin-left: 20px;
+    width: 90%;
+  }
+ .titre-label{
+  text-align: left;
+ }
+ .input-block {
+  display: flex;
+  flex-direction: column;
+}
+ .table-detail{
+  margin-right: 30px;
+  margin-left: 20px;
+  width: 100%;
+ }
+ .buttons-container {
+  text-align: right; 
+  margin-top: 20px; 
+ }
+ .pi-input {
+  padding-right: 30px; 
+  width: 100%;
+}
+
+.pi-input-container {
+  position: relative;
+}
+
+.inside-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px; 
+  transform: translateY(-70%);
+}
+.inside-icon-angle {
+  position: absolute;
+  top: 50%;
+  right: 7px; 
+  transform: translateY(-70%);
+}
+.inside-icon-times,
+.inside-icon-angle-down {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px; 
+}
+  

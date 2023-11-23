@@ -1,0 +1,126 @@
+.connexion-button-container {
+    text-align: right;
+}
+
+.connexion-button {
+    display: inline-block;
+}
+
+.small-image {
+    width: 32px;
+    height: 32px;
+}
+
+.align-right {
+    float: right;
+}
+
+.header {
+    text-align: center;
+}
+
+.search-container {
+    display: inline-block;
+}
+
+.header td {
+    padding: 10px;
+}
+
+.menu-center {
+    text-align: center; 
+    margin: 10px 0;
+}
+.carousel-center {
+    text-align: center;
+}
+
+.carousel-container {
+    display: inline-block;
+    margin: 10px 0;
+}
+.texte-barre-black {
+    text-decoration: line-through;
+    color: black;
+}
+
+.texte-red {
+    color: rgb(231, 9, 46); 
+}
+
+
+ 
+.contact-logo {
+    width: 35px;
+    height: 35px; 
+    margin-right: 10px;
+}
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-right: 10px;
+}
+
+td {
+    border-top: 1px solid black;
+    padding: 15px;
+}
+.titre-footer{
+    color: rgb(231, 9, 46); 
+    margin-right: 10px;
+}
+.contact-container {
+    text-align: right;
+    float: right;
+}
+
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.checkbox-group input {
+    margin-right: 5px;
+}
+.titre-legend{
+    padding: 10px;
+    color: black; 
+    margin: 0;
+}
+.titre-form{
+    margin-right: 350px;
+    margin-left: 20px;
+}
+.button-reset{
+    background-color: rgb(40, 172, 212);
+    color: white; 
+    border-radius: 30px; 
+    padding: 9px 20px; 
+    margin-bottom : 10px;
+    margin-left : 150px;
+}
+.text-center{
+    margin-left: 550px; 
+}
+.main-container {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .filter-container {
+    flex: 1;
+    margin-right: 3px;
+    margin-left:20px;
+  }
+  
+  .products-container {
+    flex: 2;
+  }

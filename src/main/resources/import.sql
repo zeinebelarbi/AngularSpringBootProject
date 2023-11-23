@@ -1,0 +1,67 @@
+/**Company Data**/
+INSERT INTO company (company_id,name) VALUES (1,'Company 1');
+INSERT INTO company (company_id,name) VALUES (2,'Company 2');
+INSERT INTO company (company_id,name) VALUES (3,'Company 3');
+/**Contact Data**/
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (1,'Contact 1','Contact 1','Contact1@email.com','+11111111111',1,'titile 1','address 1','city 1',1100);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (2,'Contact 2','Contact 2','Contact2@email.com','+22222222222',1,'titile 2','address 2','city 2',2200);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (3,'Contact 3','Contact 3','Contact3@email.com','+33333333333',1,'titile 3','address 3','city 3',3300);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (4,'Contact 4','Contact 4','Contact4@email.com','+44444444444',1,'titile 4','address 4','city 4',4400);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (5,'Contact 5','Contact 5','Contact5@email.com','+55555555555',1,'titile 5','address 5','city 5',5500);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (6,'Contact 6','Contact 6','Contact6@email.com','+66666666666',1,'titile 6','address 6','city 6',6600);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (7,'Contact 7','Contact 7','Contact7@email.com','+77777777777',1,'titile 7','address 7','city 7',7700);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (8,'Contact 8','Contact 8','Contact8@email.com','+88888888888',1,'titile 8','address 8','city 8',8800);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (9,'Contact 9','Contact 9','Contact9@email.com','+99999999999',1,'titile 9','address 9','city 9',9900);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (10,'Contact 10','Contact 10','Contact10@email.com','+1010101010101010101010',1,'titile 10','address 10','city 10',101000);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (11,'Contact 11','Contact 11','Contact11@email.com','+1111111111111111111111',1,'titile 11','address 11','city 11',111100);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (12,'Contact 12','Contact 12','Contact12@email.com','+1212121212121212121212',1,'titile 12','address 12','city 12',121200);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (13,'Contact 13','Contact 13','Contact13@email.com','+1313131313131313131313',1,'titile 13','address 13','city 13',131300);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (14,'Contact 14','Contact 14','Contact14@email.com','+1414141414141414141414',1,'titile 14','address 14','city 14',141400);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (15,'Contact 15','Contact 15','Contact15@email.com','+1515151515151515151515',1,'titile 15','address 15','city 15',151500);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (16,'Contact 16','Contact 16','Contact16@email.com','+1616161616161616161616',1,'titile 16','address 16','city 16',161600);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (17,'Contact 17','Contact 17','Contact17@email.com','+1717171717171717171717',1,'titile 17','address 17','city 17',171700);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (18,'Contact 18','Contact 18','Contact18@email.com','+1818181818181818181818',1,'titile 18','address 18','city 18',181800);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (19,'Contact 19','Contact 19','Contact19@email.com','+1919191919191919191919',1,'titile 19','address 19','city 19',191900);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (20,'Contact 20','Contact 20','Contact20@email.com','+2020202020202020202020',1,'titile 20','address 20','city 20',202000);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (21,'Contact 21','Contact 21','Contact21@email.com','+2121212121212121212121',1,'titile 21','address 21','city 21',212100);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (22,'Contact 22','Contact 22','Contact22@email.com','+2222222222222222222222',1,'titile 22','address 22','city 22',222200);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (23,'Contact 23','Contact 23','Contact23@email.com','+2323232323232323232323',1,'titile 23','address 23','city 23',232300);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (24,'Contact 24','Contact 24','Contact24@email.com','+2424242424242424242424',1,'titile 24','address 24','city 24',242400);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (25,'Contact 25','Contact 25','Contact25@email.com','+2525252525252525252525',1,'titile 25','address 25','city 25',252500);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (26,'Contact 26','Contact 26','Contact26@email.com','+2626262626262626262626',1,'titile 26','address 26','city 26',262600);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (27,'Contact 27','Contact 27','Contact27@email.com','+2727272727272727272727',1,'titile 27','address 27','city 27',272700);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (28,'Contact 28','Contact 28','Contact28@email.com','+2828282828282828282828',1,'titile 28','address 28','city 28',282800);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (29,'Contact 29','Contact 29','Contact29@email.com','+2929292929292929292929',1,'titile 29','address 29','city 29',292900);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (30,'Contact 30','Contact 30','Contact30@email.com','+3030303030303030303030',1,'titile 30','address 30','city 30',303000);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (31,'Contact 31','Contact 31','Contact31@email.com','+3131313131313131313131',1,'titile 31','address 31','city 31',313100);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (32,'Contact 32','Contact 32','Contact32@email.com','+3232323232323232323232',1,'titile 32','address 32','city 32',323200);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (33,'Contact 33','Contact 33','Contact33@email.com','+3333333333333333333333',1,'titile 33','address 33','city 33',333300);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (34,'Contact 34','Contact 34','Contact34@email.com','+3434343434343434343434',1,'titile 34','address 34','city 34',343400);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (35,'Contact 35','Contact 35','Contact35@email.com','+3535353535353535353535',1,'titile 35','address 35','city 35',353500);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (36,'Contact 36','Contact 36','Contact36@email.com','+3636363636363636363636',1,'titile 36','address 36','city 36',363600);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (37,'Contact 37','Contact 37','Contact37@email.com','+3737373737373737373737',1,'titile 37','address 37','city 37',373700);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (38,'Contact 38','Contact 38','Contact38@email.com','+3838383838383838383838',1,'titile 38','address 38','city 38',383800);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (39,'Contact 39','Contact 39','Contact39@email.com','+3939393939393939393939',1,'titile 39','address 39','city 39',393900);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (40,'Contact 40','Contact 40','Contact40@email.com','+4040404040404040404040',1,'titile 40','address 40','city 40',404000);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (41,'Contact 41','Contact 41','Contact41@email.com','+4141414141414141414141',1,'titile 41','address 41','city 41',414100);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (42,'Contact 42','Contact 42','Contact42@email.com','+4242424242424242424242',1,'titile 42','address 42','city 42',424200);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (43,'Contact 43','Contact 43','Contact43@email.com','+4343434343434343434343',1,'titile 43','address 43','city 43',434300);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (44,'Contact 44','Contact 44','Contact44@email.com','+4444444444444444444444',1,'titile 44','address 44','city 44',444400);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (45,'Contact 45','Contact 45','Contact45@email.com','+4545454545454545454545',1,'titile 45','address 45','city 45',454500);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (46,'Contact 46','Contact 46','Contact46@email.com','+4646464646464646464646',1,'titile 46','address 46','city 46',464600);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (47,'Contact 47','Contact 47','Contact47@email.com','+4747474747474747474747',1,'titile 47','address 47','city 47',474700);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (48,'Contact 48','Contact 48','Contact48@email.com','+4848484848484848484848',1,'titile 48','address 48','city 48',484800);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (49,'Contact 49','Contact 49','Contact49@email.com','+4949494949494949494949',1,'titile 49','address 49','city 49',494900);
+INSERT INTO contact (contact_id,first_name,last_name,email,phone_number,company_id,job_title,address,city,zip_code) VALUES (50,'Contact 50','Contact 50','Contact50@email.com','+5050505050505050505050',1,'titile 50','address 50','city 50',505000);
+ 
+/**ContactActivity Data**/
+INSERT INTO contact_activity (contact_activity_id,description,date,contact_id) VALUES (1,'activity 1 contact 1','2020-06-11 14:12:52',1);
+INSERT INTO contact_activity (contact_activity_id,description,date,contact_id) VALUES (2,'activity 2 contact 1','2020-06-12 14:12:52',1);
+INSERT INTO contact_activity (contact_activity_id,description,date,contact_id) VALUES (3,'activity 3 contact 1','2020-06-15 14:12:52',1);
+INSERT INTO contact_activity (contact_activity_id,description,date,contact_id) VALUES (4,'activity 1 contact 2','2020-06-15 14:12:52',2);
+INSERT INTO contact_activity (contact_activity_id,description,date,contact_id) VALUES (5,'activity 2 contact 2','2020-06-17 14:12:52',2);
+INSERT INTO contact_activity (contact_activity_id,description,date,contact_id) VALUES (6,'activity 3 contact 3','2020-06-17 14:12:52',3);
+/**update Hibernate_sequence Mysql**/
+UPDATE hibernate_sequence SET next_val=(select max(contact_id) from contact) + 1;
+/**update Hibernate_sequence H2**/
+alter sequence hibernate_sequence restart with select max(contact_id) from contact + 1;
